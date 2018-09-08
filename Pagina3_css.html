@@ -9,7 +9,7 @@
 				<title>CINE</title>
 			</head>
 
-			<body>
+			<body id = "cuerpo">
 
 					<div id="encabezado" class="container-fluid">
 						<header>	
@@ -29,103 +29,104 @@
 							</NAV>
 						</div>
 					
-						<br><br>
 					</div>
 					<div class="row">
-						<div id="formulario" class="container">
-							<form action="#" class="form-group"  onsubmit="return validacion()">
-							<fieldset><legend>COMPRA DEL TICKET</legend>
-								
-								<br><br><label>FECHA DEL TICKET</label>
-								<input type="date" id= "fechaticket" class="form-control"><br><br>
-
-								<label>HORARIO DE LA FUNCION</label>
-								<input type="time" class="form-control"><br><br>
-								
-								<div id="tabla" >	
-								<table style="width:100%" class="table-resposive">
-										  <tr>
-										    <th class="col-md-3 izq">TIPO DE TICKETS</th>
-										    <th class="col-md-3 izq">CANTIDAD</th> 
-										    <th class="col-md-3 izq">COSTO</th>
-										    <th class="col-md-3 izq">SUBTOTAL</th>
-										  </tr>
-										  <tr>
-										    <td>3D LUN A MIERC DESCUENTO:</td>
-										    <td><select class="form-control">
-										    	<option>0</option>
-										    	<option>1</option>
-										    	<option>2</option>
-										    	<option>3</option>
-										    	<option>4</option>
-										    	<option>5</option>
-										    </select></td> 
-										    <td class="izq">$90</td>
-										    <td></td>
-										  </tr>
-										  
-										  <tr>
-										    <td>2X1 3D BANCO SANTANDER RIO:</td>
-										    <td><select class="form-control"  onchange="tarjetaSantander()">
-										    	<option>0</option>
-										    	<option>1</option>
-										    	<option>2</option>
-										    	<option>3</option>
-										    	<option>4</option>
-										    	<option>5</option>
-										    </select></td> 
-										    <td class="izq">$75</td>
-										    <td></td>
-										  </tr>
-										
-										  <tr>
-										    <td>2X1 3D TARJETA NEVADA:</td>
-										    <td><select class="form-control" onchange="tarjetaNevada()">
-										    	<option>0</option>
-										    	<option>1</option>
-										    	<option>2</option>
-										    	<option>3</option>
-										    	<option>4</option>
-										    	<option>5</option>
-										    </select></td> 
-										    <td class="izq">$75</td>
-										    <td></td>
-										  </tr>
-
-
-										   <tr>
-										    <td>2X1 3D CLUB PERSONAL:</td>
-										    <td><select class="form-control" onchange="codigoPersonal()">
-										    	<option>0</option>
-										    	<option>1</option>
-										    	<option>2</option>
-										    	<option>3</option>
-										    	<option>4</option>
-										    	<option>5</option>
-										    </select></td> 
-										    <td class="izq">$75</td>
-										    <td></td>
-										  </tr>
-										</table>
-								</div>
+							<div id="formulario" class="container">
+								<form action="#" class="form-group"  onsubmit="return validacion()">
 								<br><br>
+								<fieldset><legend>COMPRA DEL TICKET</legend>
+									
+									<br><br><label>FECHA DEL TICKET</label>
+									<input type="date" id= "fechaticket" class="form-control"><br><br>
 
-							<div id = "bancoSantander"><strong></strong></div><br>
-							<div id = "tarjetaNevada"><strong></strong></div><br>
-							<div id = "codigoPersonal"><strong></strong></div><br>
-							
+									<label>HORARIO DE LA FUNCION</label>
+									<input type="time" class="form-control"><br><br>
+									
+									<div id="tabla" >	
+									<table style="width:100%" class="table-resposive">
+											<tr>
+												<th class="col-md-3 izq">TIPO DE TICKETS</th>
+												<th class="col-md-3 izq">CANTIDAD</th> 
+												<th class="col-md-3 izq">COSTO</th>
+												<th class="col-md-3 izq">SUBTOTAL</th>
+											</tr>
+											<tr>
+												<td>3D LUN A MIERC DESCUENTO:</td>
+												<td><select class="form-control">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+												</select></td> 
+												<td class="izq">$90</td>
+												<td></td>
+											</tr>
+											
+											<tr>
+												<td>2X1 3D BANCO SANTANDER RIO:</td>
+												<td><select class="form-control" id="selectSantander" onchange="tarjetaSantander()">
+													<option value = "0" >0</option>
+													<option value = "1" >1</option>
+													<option value = "2" >2</option>
+													<option value = "3" >3</option>
+													<option value = "4" >4</option>
+													<option value = "5" >5</option>
+												</select></td> 
+												<td class="izq">$75</td>
+												<td></td>
+											</tr>
+											
+											<tr>
+												<td>2X1 3D TARJETA NEVADA:</td>
+												<td><select class="form-control" onchange="tarjetaNevada()">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+												</select></td> 
+												<td class="izq">$75</td>
+												<td></td>
+											</tr>
 
-							<div class = "container" id="btcentrado">	
-								<a href="Pagina1_css.html" class="btn btn-danger">CANCELAR</a>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<button type="submit" class="btn btn-primary"  >ACEPTAR</button>
-							</div>
+
+											<tr>
+												<td>2X1 3D CLUB PERSONAL:</td>
+												<td><select class="form-control" onchange="codigoPersonal()">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+												</select></td> 
+												<td class="izq">$75</td>
+												<td></td>
+											</tr>
+											</table>
+									</div>
+									
+
+								<div id = "bancoSantander"><strong></strong></div><br>
+								<div id = "tarjetaNevada"><strong></strong></div><br>
+								<div id = "codigoPersonal"><strong></strong></div><br>
+								
+
+								<div class = "container" id="btcentrado">	
+									<a href="Pagina1_css.html" class="btn btn-danger">CANCELAR</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<button type="submit" class="btn btn-primary"  >ACEPTAR</button>
+								</div>
 
 							</fieldset>
 
 
 							</form>
 					</div>
+					<br>
 				</div><br><br>
 				
 					<div id="piepagina" class="container-fluid">

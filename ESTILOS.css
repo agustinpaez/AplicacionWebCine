@@ -33,12 +33,14 @@
     }
 }
 
+
+
 #encabezado {
 	color: white;
     text-align: center;
     padding: 10px;  /*El área de padding es el espacio entre el contenido del elemento y su borde */
 	text-transform: uppercase;
-	background-color: royalblue;
+	background-color: #781500;
     font-size: 20px;
     font-family: sans-serif; 
 }
@@ -46,7 +48,7 @@
 #menu ul{ 
 	width: 100%;
 	margin: 0;
-	background: royalblue;
+	background: #781500;
     list-style-type: none;
    	text-align: center;
 }
@@ -59,7 +61,7 @@
 	
    padding: 8px 70px 8px 70px;
    color: white;
-   background-color: cornflowerblue;
+   background-color: #9C280F;
    text-decoration: none;
    text-align: center;
 }
@@ -70,12 +72,24 @@
    color: #ffffff;
 }
 
+#cuerpo{
+    background-image: url(cine.jpg)
+
+}
+
 label{
 	padding: 12px 12px 12px 0;
 	display: inline-block;
 }
 
 #formulario{
+    color: #ffffff;
+	text-align: left;
+	float: none;
+}
+
+#texto{
+    color: #ffffff;
 	text-align: left;
 	float: none;
 }
@@ -89,7 +103,7 @@ label{
     text-align: center;
     padding: 10px;  /*El área de padding es el espacio entre el contenido del elemento y su borde */
 	text-transform: uppercase;
-	background-color: royalblue;
+	background-color: #781500;
     font-size: 20px;
     font-family: sans-serif; 
 }

@@ -21,15 +21,31 @@ function validacion() {
 */
 
 function tarjetaSantander(){
-    document.getElementById("bancoSantander").innerHTML = `<strong>INGRESE LOS PRIMEROS 6 DIGITOS DE SU TARJETA SANTANDER: </strong> <input type="text" id= "tarjetaSantander"><br>`;
+    
+    
+    if(document.getElementById("selectSantander").value > 0)
+    document.getElementById("bancoSantander").innerHTML = `<br><strong>INGRESE LOS PRIMEROS 6 DIGITOS DE SU TARJETA SANTANDER: </strong> <input type="text" id= "tarjetaSantander" required><br>`;;
+    if(document.getElementById("selectSantander").value = 0)
+    document.getElementById("bancoSantander").innerHTML = "";
+
+
+/*
+        if(document.getElementById("selectSantander").value!=0){
+        document.getElementById("bancoSantander").innerHTML = `<br><strong>INGRESE LOS PRIMEROS 6 DIGITOS DE SU TARJETA SANTANDER: </strong> <input type="text" id= "tarjetaSantander" required><br>`;
+        return true;
+        }else{
+        document.getElementById("bancoSantander").innerHTML =`<div></div>`;
+    }
+*/
+    
 }
 
 function tarjetaNevada(){
-    document.getElementById("tarjetaNevada").innerHTML = `<strong>LOS PRIMEROS 6 DIGITOS DE SU TARJETA NEVADA: </strong> <input type="text" id= "tarjetaNevada"><br>`;
+    document.getElementById("tarjetaNevada").innerHTML = `<br><strong>LOS PRIMEROS 6 DIGITOS DE SU TARJETA NEVADA: </strong> <input type="text" id= "tarjetaNevada" required><br>`;
 }
 
 function codigoPersonal(){
-    document.getElementById("codigoPersonal").innerHTML = `<strong>INGRESE SU CODIGO 2X1 PERSONAL: </strong> <input type="text" id= "codigoPersonal"><br>`;
+    document.getElementById("codigoPersonal").innerHTML = `<br><strong>INGRESE SU CODIGO 2X1 PERSONAL: </strong> <input type="text" id= "codigoPersonal" required><br>`;
 }
 
 

@@ -22,7 +22,7 @@ function validacion() {
 
 function tarjetaSantander(){
 
-    document.getElementById("bancoSantander").innerHTML = `<br><strong>INGRESE LOS PRIMEROS 6 DIGITOS DE SU TARJETA SANTANDER: </strong> <input type="text" id= "tarjetaSantander" required><br>`;;
+    document.getElementById("bancoSantander").innerHTML = `<br><div class="row"><div class="col-md-6"><label>INGRESE LOS PRIMEROS 6 DIGITOS DE SU TARJETA SANTANDER:</label></div><div class="col-md-6">  <input type="text" maxlength="6" id= "tarjetaSantander" class="form-control" required></div><br>`;;
    
     var valorSantander = document.getElementById("selectSantander").value;
     document.getElementById("subtotalSantander").innerHTML = `<strong>$ ${valorSantander * 75} </strong>`;
@@ -40,14 +40,14 @@ function tarjetaSantander(){
 }
 
 function tarjetaNevada(){
-    document.getElementById("tarjetaNevada").innerHTML = `<br><strong>LOS PRIMEROS 6 DIGITOS DE SU TARJETA NEVADA: </strong> <input type="text" id= "tarjetaNevada" required><br>`;
+    document.getElementById("tarjetaNevada").innerHTML = `<br><div class="row"><div class="col-md-6"><strong>LOS PRIMEROS 6 DIGITOS DE SU TARJETA NEVADA: </strong></div><div class="col-md-6"> <input type="text" maxlength="6" id= "tarjetaNevada" class="form-control" required></div><br>`;
     var valorNevada = document.getElementById("selectNevada").value;
     document.getElementById("subtotalNevada").innerHTML = `<td><strong>$ ${valorNevada * 75} </strong></td>`;
 
 }
 
 function codigoPersonal(){
-    document.getElementById("codigoPersonal").innerHTML = `<br><strong>INGRESE SU CODIGO 2X1 PERSONAL: </strong> <input type="text" id= "codigoPersonal" required><br>`;
+    document.getElementById("codigoPersonal").innerHTML = `<br><div class="row"><div class="col-md-6"><strong>INGRESE SU CODIGO 2X1 PERSONAL: </strong></div><div class="col-md-6"> <input type="text" maxlength="6" id= "codigoPersonal" class="form-control" required></div><br>`;
     var valorPersonal = document.getElementById("selectPersonal").value;
     document.getElementById("subtotalPersonal").innerHTML = `<td><strong>$ ${valorPersonal * 75} </strong></td>`;
 

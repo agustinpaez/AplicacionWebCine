@@ -73,7 +73,7 @@
 }
 
 #cuerpo{
-    background-image: url(cine.jpg)
+    background-image: url(cine2.jpg)
 
 }
 
@@ -88,11 +88,17 @@ label{
 	float: none;
 }
 
-#texto{
+#texto, #leyenda{
     color: #ffffff;
 	text-align: left;
 	float: none;
 }
+
+/*
+#leyenda{
+    color: #ffffff;
+}
+*/
 
 .izq{
 	text-align: center;

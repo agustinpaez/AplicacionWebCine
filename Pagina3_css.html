@@ -21,7 +21,7 @@
 						<div id="menu" class="container-fluid">
 							<NAV>
 								<UL class="nav navbar-nav">
-									<LI class="col-md-3"><a href="#"> Peliculas en Cartel</a></LI>
+									<LI class="col-md-3"><a href="#">Peliculas en Cartel</a></LI>
 									<LI class="col-md-3"><a href="#">Horarios</a></LI>
 									<li class="col-md-3"><a href="#">Proximos estrenos</a></li>
 									<li class="col-md-3"><a href="#">Precios</a></li>
@@ -34,7 +34,7 @@
 							<div id="formulario" class="container">
 								<form action="#" class="form-group"  onsubmit="return validacion()">
 								<br><br>
-								<fieldset><legend>COMPRA DEL TICKET</legend>
+								<fieldset><legend id = "leyenda">COMPRA DEL TICKET</legend>
 									
 									<br><br><label>FECHA DEL TICKET</label>
 									<input type="date" id= "fechaticket" class="form-control"><br><br>
@@ -53,12 +53,12 @@
 											<tr>
 												<td>3D LUN A MIERC DESCUENTO:</td>
 												<td><select class="form-control">
-													<option>0</option>
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
+													<option value = "0" >0</option>
+													<option value = "1" >1</option>
+													<option value = "2" >2</option>
+													<option value = "3" >3</option>
+													<option value = "4" >4</option>
+													<option value = "5" >5</option>
 												</select></td> 
 												<td class="izq">$90</td>
 												<td></td>
@@ -66,7 +66,21 @@
 											
 											<tr>
 												<td>2X1 3D BANCO SANTANDER RIO:</td>
-												<td><select class="form-control" id="selectSantander" onchange="tarjetaSantander()">
+												<td><select class="form-control" id="selectSantander" onchange="tarjetaSantander()" >
+													<option value = "0" >0</option>
+													<option value = "1" >1</option>
+													<option value = "2" >2</option>
+													<option value = "3" >3</option>
+													<option value = "4" >4</option>
+													<option value = "5" >5</option>
+												</select></td>
+												<td class="izq">$75</td>
+												<td id="subtotalSantander"></td>
+											</tr>
+											
+											<tr>
+												<td>2X1 3D TARJETA NEVADA:</td>
+												<td><select class="form-control" id = "selectNevada" onchange="tarjetaNevada()">
 													<option value = "0" >0</option>
 													<option value = "1" >1</option>
 													<option value = "2" >2</option>
@@ -75,36 +89,22 @@
 													<option value = "5" >5</option>
 												</select></td> 
 												<td class="izq">$75</td>
-												<td></td>
-											</tr>
-											
-											<tr>
-												<td>2X1 3D TARJETA NEVADA:</td>
-												<td><select class="form-control" onchange="tarjetaNevada()">
-													<option>0</option>
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-												</select></td> 
-												<td class="izq">$75</td>
-												<td></td>
+												<td id="subtotalNevada"></td>
 											</tr>
 
 
 											<tr>
 												<td>2X1 3D CLUB PERSONAL:</td>
-												<td><select class="form-control" onchange="codigoPersonal()">
-													<option>0</option>
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
+												<td><select class="form-control" id="selectPersonal" onchange="codigoPersonal()">
+													<option value = "0" >0</option>
+													<option value = "1" >1</option>
+													<option value = "2" >2</option>
+													<option value = "3" >3</option>
+													<option value = "4" >4</option>
+													<option value = "5" >5</option>
 												</select></td> 
 												<td class="izq">$75</td>
-												<td></td>
+												<td id="subtotalPersonal"></td>
 											</tr>
 											</table>
 									</div>

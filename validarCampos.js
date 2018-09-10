@@ -13,10 +13,11 @@ function validacion() {
     }
 }
 
-var valorPersonal;
 
-var valorNevada;
+
+
 var total = 0;
+
 
 /*function funcionHola() {
     
@@ -52,6 +53,7 @@ function tarjetaSantander(){
 }
 
 function tarjetaNevada(){
+    var valorNevada;
     document.getElementById("tarjetaNevada").innerHTML = `<div class="row"><div class="col-md-6"><strong>LOS PRIMEROS 6 DIGITOS DE SU TARJETA NEVADA: </strong></div><div class="col-md-6"> <input type="text" maxlength="6" id= "tarjetaNevada" class="form-control" required></div>`;
     valorNevada = document.getElementById("selectNevada").value;
     document.getElementById("subtotalNevada").innerHTML = `<td><strong>$ ${valorNevada * 75} </strong></td>`;
@@ -59,7 +61,12 @@ function tarjetaNevada(){
 }
 
 function codigoPersonal(){
-    document.getElementById("codigoPersonal").innerHTML = `<br><div class="row"><div class="col-md-6"><strong>INGRESE SU CODIGO 2X1 PERSONAL: </strong></div><div class="col-md-6"> <input type="text" maxlength="6" id= "codigoPersonal" class="form-control" required></div>`;
+    
+    var valorPersonal;
+    document.getElementById("codigoPersonal").innerHTML = `<div class="row">    
+<div class="col-md-6"><strong>LOS PRIMEROS 6 DIGITOS DE SU TARJETA NEVADA: </strong></div>
+<div class="col-md-6"> <input type="text" maxlength="6" id= "tarjetaNevada" class="form-control" required></div>
+</div>`;
     valorPersonal = document.getElementById("selectPersonal").value;
     document.getElementById("subtotalPersonal").innerHTML = `<td><strong>$ ${valorPersonal * 75} </strong></td>`;
     calcularTotal(valorPersonal*75)
@@ -74,3 +81,36 @@ function subtotal(){
 
 */
 
+function trasnoche(){
+    var dia = new Date(document.getElementById("fechaticket").value).getDay();
+   
+
+       if (dia==4){
+
+    document.getElementById("agregarhorario").innerHTML =`
+                                    <select class="form-control" name="horario" >
+                                            <option value="0">14:00</option>
+                                            <option value="1">14:30</option>
+                                            <option value="2">21:00</option>
+                                            <option value="3">21:30</option>
+                                            <option value="4">22:00</option>
+                                            <option value="5">22:30</option>
+        
+                                            
+                                        </select>`;
+    }else{
+
+    document.getElementById("agregarhorario").innerHTML =`
+                                    <select class="form-control" name="horario" >
+                                            <option value="0">14:00</option>
+                                            <option value="1">14:30</option>
+                                            <option value="2">21:00</option>
+                                            <option value="3">21:30</option>
+                                             </select>`;
+    }
+
+
+
+    //.getElementById("agregarhorario").innerHTML =  dia;
+
+}

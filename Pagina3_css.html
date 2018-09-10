@@ -40,11 +40,21 @@
 								<fieldset><legend id = "leyenda">COMPRA DEL TICKET</legend>
 									
 									<br><br><label>FECHA DEL TICKET</label>
-									<input type="date" id= "fechaticket" class="form-control"><br><br>
+									<input type="date" id= "fechaticket" class="form-control" onchange="trasnoche()" ><br><br>
 
 									<label>HORARIO DE LA FUNCION</label>
-									<input type="time" class="form-control"><br><br>
-									
+									<div id="agregarhorario">
+										<select class="form-control" name="horario" >
+											<option value="0">14:00</option>
+											<option value="1">14:30</option>
+											<option value="2">21:00</option>
+											<option value="3">21:30</option>
+		
+											
+										</select>
+									</div>
+									<br>
+
 									<div id="tabla" >	
 									<table style="width:100%" class="table-resposive">
 											<tr>
@@ -133,6 +143,10 @@
 					<br>
 				</div><br>
 
+<div class="row">	
+<div class="col-md-6"><strong>LOS PRIMEROS 6 DIGITOS DE SU TARJETA NEVADA: </strong></div>
+<div class="col-md-6"> <input type="text" maxlength="6" id= "tarjetaNevada" class="form-control" required></div>
+</div>
 
 			
 				

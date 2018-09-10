@@ -14,7 +14,7 @@ function validacion() {
 }
 
 var valorPersonal;
-var valorSantander;
+
 var valorNevada;
 var total = 0;
 
@@ -34,7 +34,7 @@ function calcularTotal(numero){
 
 function tarjetaSantander(){
     
-    
+    var valorSantander;
     document.getElementById("bancoSantander").innerHTML = `<br><div class="row"><div class="col-md-6"><label>INGRESE LOS PRIMEROS 6 DIGITOS DE SU TARJETA SANTANDER:</label></div><div class="col-md-6">  <input type="text" maxlength="6" id= "tarjetaSantander" class="form-control" required></div>`;
     valorSantander = document.getElementById("selectSantander").value;
     document.getElementById("subtotalSantander").innerHTML = `<strong>$ ${valorSantander * 75} </strong>`;

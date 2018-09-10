@@ -13,20 +13,32 @@ function validacion() {
     }
 }
 
+var valorPersonal;
+var valorSantander;
+var valorNevada;
+var total = 0;
+
 /*function funcionHola() {
     
         document.getElementById("campoHola").innerHTML = "hola guachin";
     
 }
 */
+function calcularTotal(numero){
+
+    ;
+    total = total + numero ;
+    document.getElementById("precioTotal").innerHTML = `<h3 class= "alert alert-warning">El total a pagar es $${total}</h3>`;
+}
+
 
 function tarjetaSantander(){
-
-    document.getElementById("bancoSantander").innerHTML = `<br><div class="row"><div class="col-md-6"><label>INGRESE LOS PRIMEROS 6 DIGITOS DE SU TARJETA SANTANDER:</label></div><div class="col-md-6">  <input type="text" maxlength="6" id= "tarjetaSantander" class="form-control" required></div><br>`;;
-   
-    var valorSantander = document.getElementById("selectSantander").value;
+    
+    
+    document.getElementById("bancoSantander").innerHTML = `<br><div class="row"><div class="col-md-6"><label>INGRESE LOS PRIMEROS 6 DIGITOS DE SU TARJETA SANTANDER:</label></div><div class="col-md-6">  <input type="text" maxlength="6" id= "tarjetaSantander" class="form-control" required></div>`;
+    valorSantander = document.getElementById("selectSantander").value;
     document.getElementById("subtotalSantander").innerHTML = `<strong>$ ${valorSantander * 75} </strong>`;
-
+    calcularTotal(valorSantander*75);
 
 /*
         if(document.getElementById("selectSantander").value!=0){
@@ -40,17 +52,17 @@ function tarjetaSantander(){
 }
 
 function tarjetaNevada(){
-    document.getElementById("tarjetaNevada").innerHTML = `<br><div class="row"><div class="col-md-6"><strong>LOS PRIMEROS 6 DIGITOS DE SU TARJETA NEVADA: </strong></div><div class="col-md-6"> <input type="text" maxlength="6" id= "tarjetaNevada" class="form-control" required></div><br>`;
-    var valorNevada = document.getElementById("selectNevada").value;
+    document.getElementById("tarjetaNevada").innerHTML = `<div class="row"><div class="col-md-6"><strong>LOS PRIMEROS 6 DIGITOS DE SU TARJETA NEVADA: </strong></div><div class="col-md-6"> <input type="text" maxlength="6" id= "tarjetaNevada" class="form-control" required></div>`;
+    valorNevada = document.getElementById("selectNevada").value;
     document.getElementById("subtotalNevada").innerHTML = `<td><strong>$ ${valorNevada * 75} </strong></td>`;
-
+    calcularTotal(valorNevada*75)
 }
 
 function codigoPersonal(){
-    document.getElementById("codigoPersonal").innerHTML = `<br><div class="row"><div class="col-md-6"><strong>INGRESE SU CODIGO 2X1 PERSONAL: </strong></div><div class="col-md-6"> <input type="text" maxlength="6" id= "codigoPersonal" class="form-control" required></div><br>`;
-    var valorPersonal = document.getElementById("selectPersonal").value;
+    document.getElementById("codigoPersonal").innerHTML = `<br><div class="row"><div class="col-md-6"><strong>INGRESE SU CODIGO 2X1 PERSONAL: </strong></div><div class="col-md-6"> <input type="text" maxlength="6" id= "codigoPersonal" class="form-control" required></div>`;
+    valorPersonal = document.getElementById("selectPersonal").value;
     document.getElementById("subtotalPersonal").innerHTML = `<td><strong>$ ${valorPersonal * 75} </strong></td>`;
-
+    calcularTotal(valorPersonal*75)
 }
 
 /*

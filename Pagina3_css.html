@@ -65,7 +65,7 @@
 											</tr>
 											<tr>
 												<td>3D LUN A MIERC DESCUENTO:</td>
-												<td><select class="form-control">
+												<td><select class="form-control" id="selectDescuento" onchange="descuentoLunMier()">
 													<option value = "0" >0</option>
 													<option value = "1" >1</option>
 													<option value = "2" >2</option>
@@ -74,7 +74,7 @@
 													<option value = "5" >5</option>
 												</select></td> 
 												<td class="izq">$90</td>
-												<td ></td>
+												<td id="subtotalDescuento" class = "izq"></td>
 											</tr>
 											
 											<tr>
@@ -121,6 +121,8 @@
 											</tr>
 											</table>
 									</div>
+
+								<br>
 									
 
 
@@ -156,6 +158,3 @@
 	</body>
 
 </html>
-
-
-

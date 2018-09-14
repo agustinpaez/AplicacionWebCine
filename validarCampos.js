@@ -1,5 +1,9 @@
 
 var total = 0;
+var subSantander = 0;
+var subNevada = 0;
+var subPersonal = 0;
+var subDescuento = 0;
 
 
 function validacion() {
@@ -18,10 +22,23 @@ function validacion() {
 
 
 function calcularTotal(numero){
+<<<<<<< HEAD
+    total = total + numero ;
+=======
 
     ;
-    total = total + numero ;
+    total = subDescuento + subNevada + subPersonal + subSantander;
+>>>>>>> 058d6226019ac78085073bc80f1f562edd3be103
     document.getElementById("precioTotal").innerHTML = `<h3 class= "alert alert-warning">El total a pagar es $${total}</h3>`;
+}
+
+function descuentoLunMier(){
+
+    var valorDescuento;
+    valorDescuento = document.getElementById("selectDescuento").value;
+    subDescuento = valorDescuento * 90;
+    document.getElementById("subtotalDescuento").innerHTML = `<strong>$ ${valorDescuento * 90} </strong>`;
+    calcularTotal(subDescuento);
 }
 
 
@@ -33,8 +50,9 @@ function tarjetaSantander(){
     <div class="col-md-6"> <input type="text" maxlength="6" id= "inputTarjetaSantander" class="form-control" required></input></div>
     </div>`;
     valorSantander = document.getElementById("selectSantander").value;
+    subSantander = valorSantander * 75;
     document.getElementById("subtotalSantander").innerHTML = `<strong>$ ${valorSantander * 75} </strong>`;
-    calcularTotal(valorSantander*75);
+    calcularTotal(subSantander);
 
 
     
@@ -47,8 +65,9 @@ function tarjetaNevada(){
     <div class="col-md-6"> <input type="text" maxlength="6" id= "inputTarjetaNevada" class="form-control" required></input></div>
     </div>`;
     valorNevada = document.getElementById("selectNevada").value;
+    subNevada = valorNevada * 75;
     document.getElementById("subtotalNevada").innerHTML = `<td><strong>$ ${valorNevada * 75} </strong></td>`;
-    calcularTotal(valorNevada*75)
+    calcularTotal(subNevada)
 }
 
 function codigoPersonal(){
@@ -59,8 +78,9 @@ function codigoPersonal(){
     <div class="col-md-6"> <input type="text" maxlength="6" id= "inputCodigoPersonal" class="form-control" required></input></div>
     </div>`;
     valorPersonal = document.getElementById("selectPersonal").value;
+    subPersonal = valorPersonal*75;
     document.getElementById("subtotalPersonal").innerHTML = `<td><strong>$ ${valorPersonal * 75} </strong></td>`;
-    calcularTotal(valorPersonal*75)
+    calcularTotal(subPersonal)
 }
 
 

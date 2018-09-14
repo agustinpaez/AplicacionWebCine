@@ -22,13 +22,8 @@ function validacion() {
 
 
 function calcularTotal(numero){
-<<<<<<< HEAD
     total = total + numero ;
-=======
-
-    ;
     total = subDescuento + subNevada + subPersonal + subSantander;
->>>>>>> 058d6226019ac78085073bc80f1f562edd3be103
     document.getElementById("precioTotal").innerHTML = `<h3 class= "alert alert-warning">El total a pagar es $${total}</h3>`;
 }
 

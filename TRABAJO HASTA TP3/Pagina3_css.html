@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+			<head>
+				<link rel="stylesheet" type="text/css" href="ESTILOS.css">
+				<link rel="stylesheet" type="text/css" href="bootstrap.css">
+				<script src= "validarCampos.js"></script>
+				<script src="jquery-3.3.1.min"></script>
+				<script src="bootstrap.js"></script>
+				<script src="popper.min"></script>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>CINE</title>
+			</head>
+
+			<body id = "cuerpo">
+
+					<div id="encabezado" class="container-fluid">
+						<header>	
+							<h1> Cines Argentinos</h1>
+						</header>
+					</div>
+
+					<div class="row">
+						<div id="menu" class="container-fluid">
+							<NAV>
+								<UL class="nav navbar-nav">
+									<LI class="col-md-3"><a href="#">Peliculas en Cartel</a></LI>
+									<LI class="col-md-3"><a href="#">Horarios</a></LI>
+									<li class="col-md-3"><a href="#">Proximos estrenos</a></li>
+									<li class="col-md-3"><a href="#">Precios</a></li>
+								</UL>
+							</NAV>
+						</div>
+					
+					</div>
+					<div class="row">
+							<div id="formulario" class="container">
+								<form action="#" class="form-group"  onsubmit="return validacion()">
+								<br><br>
+								<fieldset><legend id = "leyenda">COMPRA DEL TICKET</legend>
+									
+									<br><br><label>FECHA DEL TICKET</label>
+									<input type="date" id= "fechaticket" class="form-control" onchange="trasnoche()" ><br><br>
+
+									<label>HORARIO DE LA FUNCION</label>
+									<div id="agregarhorario">
+										<select class="form-control" name="horario" >
+											<option value="0">14:00</option>
+											<option value="1">14:30</option>
+											<option value="2">21:00</option>
+											<option value="3">21:30</option>
+		
+											
+										</select>
+									</div>
+									<br>
+
+									<div id="tabla" >	
+									<table style="width:100%" class="table-resposive">
+											<tr>
+												<th class="col-md-3 izq">TIPO DE TICKETS</th>
+												<th class="col-md-3 izq">CANTIDAD</th> 
+												<th class="col-md-3 izq">COSTO</th>
+												<th class="col-md-3 izq">SUBTOTAL</th>
+											</tr>
+											<tr>
+												<td>3D LUN A MIERC DESCUENTO:</td>
+												<td><select class="form-control" id="selectDescuento" onchange="descuentoLunMier()">
+													<option value = "0" >0</option>
+													<option value = "1" >1</option>
+													<option value = "2" >2</option>
+													<option value = "3" >3</option>
+													<option value = "4" >4</option>
+													<option value = "5" >5</option>
+												</select></td> 
+												<td class="izq">$90</td>
+												<td id="subtotalDescuento" class = "izq"></td>
+											</tr>
+											
+											<tr>
+												<td>2X1 3D BANCO SANTANDER RIO:</td>
+												<td><select class="form-control" id="selectSantander" onchange="tarjetaSantander()" >
+													<option value = "0" >0</option>
+													<option value = "1" >1</option>
+													<option value = "2" >2</option>
+													<option value = "3" >3</option>
+													<option value = "4" >4</option>
+													<option value = "5" >5</option>
+												</select></td>
+												<td class="izq">$75</td>
+												<td id="subtotalSantander" class="izq"></td>
+											</tr>
+											
+											<tr>
+												<td>2X1 3D TARJETA NEVADA:</td>
+												<td><select class="form-control" id = "selectNevada" onchange="tarjetaNevada()">
+													<option value = "0" >0</option>
+													<option value = "1" >1</option>
+													<option value = "2" >2</option>
+													<option value = "3" >3</option>
+													<option value = "4" >4</option>
+													<option value = "5" >5</option>
+												</select></td> 
+												<td class="izq">$75</td>
+												<td id="subtotalNevada" class="izq"></td>
+											</tr>
+
+
+											<tr>
+												<td>2X1 3D CLUB PERSONAL:</td>
+												<td><select class="form-control" id="selectPersonal" onchange="codigoPersonal()">
+													<option value = "0" >0</option>
+													<option value = "1" >1</option>
+													<option value = "2" >2</option>
+													<option value = "3" >3</option>
+													<option value = "4" >4</option>
+													<option value = "5" >5</option>
+												</select></td> 
+												<td class="izq">$75</td>
+												<td id="subtotalPersonal" class="izq"></td>
+											</tr>
+											</table>
+									</div>
+
+								<br>
+									
+
+								<br>	
+								<div id = "bancoSantander" class="container"></div><br>
+								<div id = "tarjetaNevada" class="container"></div><br>
+								<div id = "codigoPersonal" class="container"></div><br>
+																	
+								<div class="container" id="precioTotal"></div><br>
+												
+
+								<div class = "container" id="btcentrado">	
+									<a href="Pagina1_css.html" class="btn btn-danger">CANCELAR</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<button type="submit" class="btn btn-primary"  >ACEPTAR</button>
+								</div>
+
+							</fieldset>
+						</form>
+					</div>
+					<br>
+				</div><br>
+			
+				
+				<div id="piepagina" class="container-fluid">
+				
+					<footer class="page-footer font-small blue">
+						<div class="footer-copyright text-center py-3">© 2018 Copyright: Argentina, Todos los derechos reservados
+  						</div>
+					</footer>	
+				</div>
+
+
+	</body>
+
+</html>
